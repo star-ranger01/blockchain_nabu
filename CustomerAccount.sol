@@ -4,9 +4,11 @@ pragma solidity ^0.5.0;
 contract CustomerAccount{
     address owner;
     bool isNewAccount;
-    uint public accountBalance;
+    uint accountBalance;
     string customerName;
     string customerLastName;
     
-    function getInfo () public returns {};
+    function getInfo() view public returns(address, bool, uint, string memory, string memory) {
+        return (owner, isNewAccount, accountBalance, customerName, customerLastName)
+    }
 }

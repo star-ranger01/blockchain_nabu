@@ -8,5 +8,6 @@ contract CustomerAccount{
     string customerName;
     string customerLastName;
     
-    function getInfo () public returns {};
+    function setInfo () accountAccess {};
+
 }

@@ -7,4 +7,6 @@ contract CustomerAccount{
     uint public accountBalance;
     string customerName;
     string customerLastName;
+    
+    function getInfo () public returns {};
 }

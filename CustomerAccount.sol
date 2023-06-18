@@ -7,8 +7,8 @@ contract CustomerAccount{
     uint accountBalance;
     string customerName;
     string customerLastName;
-    
+
     function getInfo() view public returns(address, bool, uint, string memory, string memory) {
         return (owner, isNewAccount, accountBalance, customerName, customerLastName)
-    }
+    };
 }

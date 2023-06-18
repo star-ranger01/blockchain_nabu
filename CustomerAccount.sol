@@ -4,7 +4,7 @@ pragma solidity ^0.5.0;
 contract CustomerAccount{
     address owner;
     bool isNewAccount;
-    uint accountBalance;
+    uint public accountBalance;
     string customerName;
     string customerLastName;
 

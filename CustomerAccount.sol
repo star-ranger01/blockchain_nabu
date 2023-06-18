@@ -11,4 +11,13 @@ contract CustomerAccount{
     function getInfo() view public returns(address, bool, uint, string memory, string memory) {
         return (owner, isNewAccount, accountBalance, customerName, customerLastName);
     }
+    
+    function setInfo(address owner, bool isNewAccount, uint accountBalance, string memory customerName, string memory customerLastName) public {
+        owner = newOwner;
+        isNewAccount = newAccountStatus;
+        accountBalance = newAccountBalance;
+        customerName = newCustomerName;
+        customerLastName = newCustomerLastName;
+    }
+
 }

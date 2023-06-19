@@ -12,7 +12,7 @@ contract CustomerAccount{
         return (owner, isNewAccount, accountBalance, customerName, customerLastName);
     }
     
-    function setInfo(address owner, bool isNewAccount, uint accountBalance, string memory customerName, string memory customerLastName) public {
+    function setInfo(address newOwner, bool newAccountStatus, uint newAccountBalance, string memory newCustomerName, string memory newCustomerLastName) public {
         owner = newOwner;
         isNewAccount = newAccountStatus;
         accountBalance = newAccountBalance;
@@ -30,4 +30,5 @@ contract CustomerAccount{
     }
 
     function() external payable {}
+
 }

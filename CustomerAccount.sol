@@ -19,4 +19,15 @@ contract CustomerAccount{
         customerName = newCustomerName;
         customerLastName = newCustomerLastName;
     }
+
+    function sendRemittance(uint amount, address payable recepient) public {
+       recepient.transfer(amount);
+       accountBalance = address(this).balance;
+    }
+
+    fucntion deposit() public payable {
+       accountBalance = address(this).balance;
+    }
+
+    function() external payable {}
 }

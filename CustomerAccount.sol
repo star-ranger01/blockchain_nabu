@@ -25,7 +25,7 @@ contract CustomerAccount{
        accountBalance = address(this).balance;
     }
 
-    fucntion deposit() public payable {
+    function deposit() public payable {
        accountBalance = address(this).balance;
     }
 

@@ -9,6 +9,26 @@ contract CustomerAccount{
     string customerLastName;
 
     function getInfo() view public returns(address, bool, uint, string memory, string memory) {
-        return (owner, isNewAccount, accountBalance, customerName, customerLastName)
-    };
+        return (owner, isNewAccount, accountBalance, customerName, customerLastName);
+    }
+    
+    function setInfo(address owner, bool isNewAccount, uint accountBalance, string memory customerName, string memory customerLastName) public {
+        owner = newOwner;
+        isNewAccount = newAccountStatus;
+        accountBalance = newAccountBalance;
+        customerName = newCustomerName;
+        customerLastName = newCustomerLastName;
+    }
+
+    function sendRemittance(uint amount, address payable recepient) public {
+       recepient.transfer(amount);
+       accountBalance = address(this).balance;
+    }
+
+    fucntion deposit() public payable {
+       accountBalance = address(this).balance;
+    }
+
+    function() external payable {}
+
 }
